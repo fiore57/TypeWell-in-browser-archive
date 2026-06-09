@@ -1,8 +1,8 @@
 import { eMode } from "./typeWell";
 import { getRandomInt } from "./utils";
 
-import * as firebase from "firebase/app";
-import "firebase/storage";
+import { initializeApp } from "firebase/app";
+import { getStorage, ref, getDownloadURL } from "firebase/storage";
 
 // ストレージを準備
 const firebaseConfig = {
@@ -13,32 +13,31 @@ const firebaseConfig = {
   storageBucket: "typewell-in-browser.appspot.com",
   messagingSenderId: "810686145856",
   appId: "1:810686145856:web:79e7686e61aacfdd8046a5",
-  measurementId: "G-4B7N3R3NP1"
+  measurementId: "G-4B7N3R3NP1",
 };
-firebase.initializeApp(firebaseConfig);
-const storage = firebase.storage();
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
 const fileNameList: string[] = [
   "khjy.json",
   "ktkn.json",
   "knj.json",
-  "ktwz.json"
+  "ktwz.json",
 ];
 
 for (let i = 0; i < 4; ++i) {
-  const ref = storage.ref(fileNameList[i]);
-  ref
-    .getDownloadURL()
-    .then(url => {
+  const fileRef = ref(storage, fileNameList[i]);
+  getDownloadURL(fileRef)
+    .then((url) => {
       const xhr = new XMLHttpRequest();
       xhr.responseType = "json";
-      xhr.onload = event => {
+      xhr.onload = (event) => {
         // 読み込まれたあとの処理
         TypingWords.m_words[i] = xhr.response.list;
       };
       xhr.open("GET", url);
       xhr.send();
     })
-    .catch(error => {
+    .catch((error) => {
       switch (error.code) {
         case "storage/object-not-found":
           // File doesn't exist
