@@ -30,6 +30,7 @@
 ## Project setup（以下、開発者向け）
 
 ```
+mise install
 npm install
 ```
 
