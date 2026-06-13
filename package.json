@@ -13,7 +13,7 @@
     "@typescript-eslint/parser": "^2.34.0",
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
-    "firebase": "^11.0.2",
+    "firebase": "^11.10.0",
     "vue": "^2.6.11",
     "vue-class-component": "^7.2.3"
   },
@@ -28,7 +28,7 @@
     "@vue/test-utils": "1.0.3",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.26.8",
+    "sass": "^1.101.0",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.5",
     "vue-template-compiler": "^2.6.11"
