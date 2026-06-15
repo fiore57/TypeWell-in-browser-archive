@@ -1,8 +1,13 @@
+> [!NOTE]
+> このリポジトリは Vue 2 版のアーカイブです。  
+> 現在は [https://github.com/fiore57/typewell-in-browser](https://github.com/fiore57/typewell-in-browser) で開発しています。
+
 # ブラウザ版 タイプウェル国語 R
 
 [![CircleCI](https://circleci.com/gh/fiore57/TypeWell-in-browser/tree/master.svg?style=svg)](https://circleci.com/gh/fiore57/TypeWell-in-browser/tree/master)
 
-[ブラウザ版 タイプウェル国語 R](https://typewell-in-browser.web.app/)
+~~[ブラウザ版 タイプウェル国語 R（旧 URL）](https://typewell-in-browser.web.app/)~~
+[ブラウザ版 タイプウェル国語 R（新 URL）](https://typewell-in-browser.com/)
 
 **このアプリは非公式です。このアプリに関する不具合報告・要望・苦情等は、オリジナル作者にしないようお願いいたします。**
 
